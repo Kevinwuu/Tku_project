@@ -56,13 +56,13 @@ while(True):
     # Display the resulting frame
     cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
     cv2.namedWindow('frame1', cv2.WINDOW_NORMAL)
-    cv2.namedWindow('road', cv2.WINDOW_NORMAL)
-    cv2.namedWindow('car', cv2.WINDOW_NORMAL)
+    # cv2.namedWindow('road', cv2.WINDOW_NORMAL)
+    # cv2.namedWindow('car', cv2.WINDOW_NORMAL)
 
     cv2.imshow('frame', frame)
-    cv2.imshow('frame1', fgmask)
-    cv2.imshow('road', road)
-    cv2.imshow('car', road_withoutCar)
+    cv2.imshow('frame1', car)
+    # cv2.imshow('road', road)
+    # cv2.imshow('car', road_withoutCar)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

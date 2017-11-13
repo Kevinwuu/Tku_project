@@ -4,7 +4,7 @@ import numpy as np
 
 
 # 讀圖
-image = cv2.imread("image/400.jpg")
+image = cv2.imread("image/can.jpg")
 
 # 轉灰階
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -13,15 +13,16 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 #                              cv2.THRESH_BINARY_INV, 11, 2)
 
 # 高斯慮波
-blurred = cv2.GaussianBlur(gray, (11, 11), 0)
+blurred = cv2.GaussianBlur(gray, (7, 7), 0)
 # blurred = cv2.threshold(blurred, 0, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C)
 
 # 肯尼邊緣偵測
-binaryIMG = cv2.Canny(blurred, 50, 120, 5)
+binaryIMG = cv2.Canny(blurred, 50, 150)
 
 # 找輪廓, cnts是個list,存放每組封閉輪廓的座標
 (_, cnts, _) = cv2.findContours(binaryIMG.copy(),
                                 cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
 # 創造clone用來畫圖
 clone = image.copy()
 cv2.namedWindow("image", cv2.WINDOW_KEEPRATIO)
@@ -57,8 +58,8 @@ for c in cnts:
 
         cv2.drawContours(mask, [c], -1, 255, -1)  # 255        →白色, -1→塗滿
         x, y, w, h = cv2.boundingRect(mask)
-        # cv2.namedWindow("Mask", cv2.WINDOW_KEEPRATIO)
-        # cv2.imshow("Mask", mask)
+        cv2.namedWindow("Mask", cv2.WINDOW_KEEPRATIO)
+        cv2.imshow("Mask", mask)
         i = i + 1
 
         # 將mask與原圖形作AND運算
