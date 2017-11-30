@@ -6,7 +6,7 @@ import numpy as np
 # 讀圖
 bg = cv2.imread("image/04.jpg", 0)
 origin = cv2.imread("image/03.jpg")
-img2 = cv2.imread("image/03.jpg")
+img2 = origin.copy()
 
 
 # 原圖轉灰階
