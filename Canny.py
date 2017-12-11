@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 # from matplotlib import pyplot as plt
 
-
+print("hello")
 # 讀圖
 image = cv2.imread("image/can.jpg")
 
