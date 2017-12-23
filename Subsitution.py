@@ -47,41 +47,40 @@ cv2.namedWindow("crop", cv2.WINDOW_KEEPRATIO)
 cv2.imshow("crop", imcrop)
 
 
-# 個別視窗顯示
-cv2.namedWindow("origin", cv2.WINDOW_KEEPRATIO)
-cv2.namedWindow("substract", cv2.WINDOW_NORMAL)
-cv2.namedWindow("th", cv2.WINDOW_NORMAL)
-cv2.namedWindow("open", cv2.WINDOW_NORMAL)
-cv2.namedWindow("blur", cv2.WINDOW_NORMAL)
-# cv2.namedWindow("close", cv2.WINDOW_NORMAL)
+# # 個別視窗顯示
+# cv2.namedWindow("origin", cv2.WINDOW_KEEPRATIO)
+# cv2.namedWindow("substract", cv2.WINDOW_NORMAL)
+# cv2.namedWindow("th", cv2.WINDOW_NORMAL)
+# cv2.namedWindow("open", cv2.WINDOW_NORMAL)
+# cv2.namedWindow("blur", cv2.WINDOW_NORMAL)
+# # cv2.namedWindow("close", cv2.WINDOW_NORMAL)
 
 
-cv2.imshow("origin", origin)
-cv2.imshow("substract", gray)
-cv2.imshow("th", th)
-cv2.imshow("open", open)
-cv2.imshow("blur", blur)
-print(blur.shape)
-# cv2.imshow("close", close)
+# cv2.imshow("origin", origin)
+# cv2.imshow("substract", gray)
+# cv2.imshow("th", th)
+# cv2.imshow("open", open)
+# cv2.imshow("blur", blur)
+# print(blur.shape)
+# # cv2.imshow("close", close)
 
 
 
-# # plt會倒過來顯示色彩，所以要調整
-# plt.subplot(241), plt.imshow(cv2.cvtColor(
-#     origin, cv2.COLOR_BGR2RGB), "gray"), plt.title('Origin')
-# plt.axis('off')
-# # plt.colorbar()
-# plt.subplot(242), plt.imshow(gray, 'gray'), plt.title('Gray')
-# plt.axis('off')
-# plt.subplot(243), plt.imshow(blur, "gray"), plt.title('Blur')
-# plt.axis('off')
-# plt.subplot(244), plt.imshow(th, 'gray'), plt.title('Th')
-# plt.axis('off')
-# plt.subplot(245), plt.imshow(cv2.cvtColor(
-#     img2, cv2.COLOR_BGR2RGB), "gray"), plt.title('Plot')
-# plt.axis('off')
+# plt會倒過來顯示色彩，所以要調整
+plt.subplot(241), plt.imshow(cv2.cvtColor(
+    origin, cv2.COLOR_BGR2RGB), "gray"), plt.title('Origin')
+plt.axis('off')
+plt.subplot(242), plt.imshow(gray, 'gray'), plt.title('Gray')
+plt.axis('off')
+plt.subplot(243), plt.imshow(blur, "gray"), plt.title('Blur')
+plt.axis('off')
+plt.subplot(244), plt.imshow(th, 'gray'), plt.title('Th')
+plt.axis('off')
+plt.subplot(245), plt.imshow(cv2.cvtColor(
+    img2, cv2.COLOR_BGR2RGB), "gray"), plt.title('Plot')
+plt.axis('off')
 
-# plt.show()
+plt.show()
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

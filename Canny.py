@@ -12,6 +12,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
 #                              cv2.THRESH_BINARY_INV, 11, 2)
 
+
 # 高斯慮波
 blurred = cv2.GaussianBlur(gray, (7, 7), 0)
 # blurred = cv2.threshold(blurred, 0, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C)
