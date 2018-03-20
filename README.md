@@ -63,7 +63,7 @@
 
 
 ### 參考資料
-[網路資源](http://beta.hackfoldr.org/kevinisme/https%253A%252F%252Fhackmd.io%252FKYFg7ArADDBGC0UBMYCc8SwGxXgQwEYATAZngOADMoAOMPWE1FIA%253Fview)
+[網路資源](https://hackmd.io/s/By-u-DOCb#)
 
 
-[專題討論紀錄](https://hackmd.io/fWSxbgA4SnKGE882SsWV6A?view)
+[專題討論紀錄](https://hackmd.io/s/SJtjkO8qZ#)
