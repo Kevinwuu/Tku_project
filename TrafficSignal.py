@@ -109,7 +109,6 @@ c.place(x=100, y=220)
 
 
 
-
 # 顯示狀態
 show = tk.Label(win, textvariable=result,
                 font=('Arial, 12'), width=10, height=2)
