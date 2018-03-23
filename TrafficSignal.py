@@ -34,6 +34,7 @@ result.set("True")
 
 
 def getSignal(x):
+
     print(x)
 
 
@@ -45,7 +46,7 @@ def count_time(i, j):
         sleep(1)
         i = i - 1
         if i == -1:
-            change_light(FLAG=0)
+            change_light(1)
             # sleep(1)
             i = j
             j = -1
@@ -67,7 +68,7 @@ def change_light(FLAG):
         g.config(bg="white")
 
         # 是否轉黃燈
-        if FLAG is True:
+        if FLAG:
             y.config(bg="yellow")
             win.update()
             sleep(2)
@@ -103,8 +104,10 @@ p.place(x=100, y=170)
 
 c = tk.Button(win, text="Quick Change", cursor="target",
               width=15, height=2,
-              command=lambda: change_light(FLAG=1))
+              command=lambda: change_light(FLAG=0))
 c.place(x=100, y=220)
+
+
 
 
 # 顯示狀態
